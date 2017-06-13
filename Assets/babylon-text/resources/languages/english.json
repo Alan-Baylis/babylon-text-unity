@@ -1,0 +1,7 @@
+{
+  "hello": "Hello there!",
+  "goodbye": "Goodbye!",
+  "quotes": "'I'm using simple quotes",
+  "double quotes": "\"I'm using double quotes!\"",
+  "new line" : "\nthis will always be in a new line"
+}

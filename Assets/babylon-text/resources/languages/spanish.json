@@ -1,0 +1,7 @@
+{
+  "hello": "Hola!",
+  "goodbye": "Adiós!",
+  "quotes": "'usando comillas simples'",
+  "double quotes": "\"usando comillas dobles!\"",
+  "new line" : "\nesto siempre está en una linea nueva"
+}
