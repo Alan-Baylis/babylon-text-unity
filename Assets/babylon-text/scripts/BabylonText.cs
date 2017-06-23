@@ -4,28 +4,28 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Text))]
-public class BabylonText : MonoBehaviour 
+public class BabylonText : MonoBehaviour
 {
-	BabylonBook myBook;
-	Text myText;
-	char keySeparator = '@';
-	char textSeparator = ' ';
+    public char keySeparator = '@';
+    char textSeparator = ' ';
 
-	void Awake()
-	{
-		myBook = FindObjectOfType<BabylonBook>();
-		myText = GetComponent<Text>();
-	}
+    Text myText;
 
-	void Start () {
-		//get keys from Text's content
-		string[] keys = myText.text.Split(keySeparator);
-		//nullify the Text's content
-		myText.text = "";
-		//compose the final Text's content with the values of that keys
-		foreach (string key in keys)
-		{
-			myText.text += myBook.GetString(key) + textSeparator;			
-		}
-	}
+    void Awake()
+    {
+        myText = GetComponent<Text>();
+    }
+
+    void Start()
+    {
+        //get keys from Text's content
+        string[] keys = myText.text.Split(keySeparator);
+        //nullify the Text's content
+        myText.text = "";
+        //compose the final Text's content with the values of that keys
+        foreach (string key in keys)
+        {
+            myText.text += BabylonCore.instance.GetString(key) + textSeparator;
+        }
+    }
 }
